@@ -1,13 +1,27 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿class Program
+{
+    static void Main(string[] args)
+    {
+        string hello = "Hello METANIT.COM"; // определение переменной - внутри Main
 
-try
-{
-    int a = 33;
-    int b = 600;
-    byte c = checked((byte)(a + b)); // checked - выбрасывает исключение в случае переполнения указанного типа
-    Console.WriteLine(c);
+        void Print(string message)          // определение метода - внутри Main
+        {
+            Console.WriteLine(message);
+        }
+
+        Print(hello);                       // вызов метода - внутри Main
+
+
+
+
+        Person tom = new();                 // создание экземпляра класса - внутри Main
+        tom.SayHello();                     // вызов метода объекта tom - внутри Main
+
+    }
 }
-catch (OverflowException ex)
+
+// определение нового класса - вне класса Program
+class Person
 {
-    Console.WriteLine(ex.Message);
+    public void SayHello() => Console.WriteLine("Hello");
 }
