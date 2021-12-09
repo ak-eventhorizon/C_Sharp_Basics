@@ -1,27 +1,18 @@
-﻿class Program
-{
-    static void Main(string[] args)
-    {
-        string hello = "Hello METANIT.COM"; // определение переменной - внутри Main
+﻿Person vasya = new();
 
-        void Print(string message)          // определение метода - внутри Main
-        {
-            Console.WriteLine(message);
-        }
+string myName = vasya.Name;
+Console.WriteLine(myName);
 
-        Print(hello);                       // вызов метода - внутри Main
+vasya.Name = "Vasya!";
+myName = vasya.Name;
+Console.WriteLine(myName);
 
-
-
-
-        Person tom = new();                 // создание экземпляра класса - внутри Main
-        tom.SayHello();                     // вызов метода объекта tom - внутри Main
-
-    }
-}
-
-// определение нового класса - вне класса Program
 class Person
 {
-    public void SayHello() => Console.WriteLine("Hello");
+    private string name = "Undefined";
+    public string Name 
+    { 
+        get { return name; } 
+        set { name = value; } 
+    }
 }
