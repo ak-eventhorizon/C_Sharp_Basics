@@ -1,38 +1,39 @@
-﻿class Calculator
+﻿namespace Collections
 {
-    public void Add(int a, int b)
+    class Program
     {
-        int result = a + b;
-        Console.WriteLine($"Result is {result}");
+        static void Main(string[] args)
+        {
+            List<int> numbers = new List<int>() { 1, 2, 3, 45 };
+            
+            numbers.Add(6); // добавление элемента
+ 
+            numbers.AddRange(new int[] { 7, 8, 9 });
+ 
+            numbers.Insert(0, 666); // вставляем на первое место в списке число 666
+ 
+            numbers.RemoveAt(1); //  удаляем второй элемент
+ 
+            foreach (int i in numbers)
+            {
+                Console.WriteLine(i);
+            }
+ 
+            List<Person> people = new List<Person>(3);
+            people.Add(new Person() { Name = "Том" });
+            people.Add(new Person() { Name = "Билл" });
+ 
+            foreach (Person p in people)
+            {
+                Console.WriteLine(p.Name);
+            }
+ 
+            Console.ReadLine();
+        }
     }
-    public void Add(int a, int b, int c)
+ 
+    class Person
     {
-        int result = a + b + c;
-        Console.WriteLine($"Result is {result}");
-    }
-    public int Add(int a, int b, int c, int d)
-    {
-        int result = a + b + c + d;
-        Console.WriteLine($"Result is {result}");
-        return result;
-    }
-    public void Add(double a, double b)
-    {
-        double result = a + b;
-        Console.WriteLine($"Result is {result}");
-    }
-}
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        Calculator calc = new Calculator();
-        calc.Add(1, 2); // 3
-        calc.Add(1, 2, 3); // 6
-        calc.Add(1, 2, 3, 4); // 10
-        calc.Add(1.4, 2.5); // 3.9
-
-        Console.ReadKey();
+        public string? Name { get; set; }
     }
 }
