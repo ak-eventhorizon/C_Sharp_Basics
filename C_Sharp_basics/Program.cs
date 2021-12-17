@@ -1,39 +1,20 @@
-﻿namespace Collections
+﻿List<User> users = new List<User>()
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            List<int> numbers = new List<int>() { 1, 2, 3, 45 };
-            
-            numbers.Add(6); // добавление элемента
+    new User { Name = "Tom", Age = 33 },
+    new User { Name = "Bob", Age = 30 },
+    new User { Name = "Tom", Age = 21 },
+    new User { Name = "Sam", Age = 43 }
+};
  
-            numbers.AddRange(new int[] { 7, 8, 9 });
+var sortedUsers = from u in users
+                  orderby u.Age descending
+                  select u;
  
-            numbers.Insert(0, 666); // вставляем на первое место в списке число 666
- 
-            numbers.RemoveAt(1); //  удаляем второй элемент
- 
-            foreach (int i in numbers)
-            {
-                Console.WriteLine(i);
-            }
- 
-            List<Person> people = new List<Person>(3);
-            people.Add(new Person() { Name = "Том" });
-            people.Add(new Person() { Name = "Билл" });
- 
-            foreach (Person p in people)
-            {
-                Console.WriteLine(p.Name);
-            }
- 
-            Console.ReadLine();
-        }
-    }
- 
-    class Person
-    {
-        public string? Name { get; set; }
-    }
+foreach (User u in sortedUsers)
+    Console.WriteLine(u.Name + " " + u.Age);
+
+
+class User {
+    public string? Name{get; set;}
+    public int Age{get; set;}
 }
