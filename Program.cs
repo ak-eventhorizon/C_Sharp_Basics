@@ -1,10 +1,12 @@
 ﻿using System;
 
-
+// пространство имен - по имени проекта
 namespace C_Sharp_Basics {
 
+    // класс - по имени файла
     class Program {
 
+        // метод Main() - единственный на проект, точка входа в исполнение программы
         static void Main(string[] args) {
             User vasya = new User("Vasya");
             vasya.Speak("Hello everyone!");
