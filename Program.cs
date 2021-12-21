@@ -12,8 +12,10 @@ namespace C_Sharp_Basics {
             // vasya.Speak("Hello everyone!");
             // vasya.Jump();
 
-            
-
+            System.Console.Write("Введите радиус круга: ");
+            double radius = Convert.ToDouble(Console.ReadLine());
+            double area = Math.PI * Math.Pow(radius, 2);
+            System.Console.WriteLine($"Круг с радиусом {radius} имеет площадь {Math.Round(area, 2)}");
         }
     }    
-}
+} 
