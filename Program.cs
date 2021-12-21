@@ -8,14 +8,23 @@ namespace C_Sharp_Basics {
 
         // метод Main() - единственный на проект, точка входа в исполнение программы
         static void Main(string[] args) {
-            // User vasya = new User("Vasya");
-            // vasya.Speak("Hello everyone!");
-            // vasya.Jump();
+            
 
-            System.Console.Write("Введите радиус круга: ");
-            double radius = Convert.ToDouble(Console.ReadLine());
-            double area = Math.PI * Math.Pow(radius, 2);
-            System.Console.WriteLine($"Круг с радиусом {radius} имеет площадь {Math.Round(area, 2)}");
+            int[] myArr = new int[10];
+            Random rnd = new Random();
+            int summ =0;
+
+            for (int i = 0; i < myArr.Length; i++)
+            {
+                myArr[i] = rnd.Next(-10,11);
+                System.Console.WriteLine(myArr[i]);
+                
+                summ += myArr[i];
+            }
+
+            System.Console.WriteLine("SUMM = " + summ);
+        
+        
         }
     }    
 } 
