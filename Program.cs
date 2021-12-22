@@ -11,11 +11,12 @@ namespace C_Sharp_Basics {
             
 
             int[,] arr2d = {
-                {1,2,3,4},
-                {5,6,7,8},
-                {9,10,11,12}
+                {11,21,31,41},
+                {52,62,72,82},
+                {93,10,11,12}
             };
-        
+
+            // перебор двумерного массива через for
             for (int i = 0; i <= arr2d.GetUpperBound(0); i++)
             {
                 for (int j = 0; j <= arr2d.GetUpperBound(1); j++)
@@ -23,8 +24,13 @@ namespace C_Sharp_Basics {
                     System.Console.WriteLine(arr2d[i,j]);
                 }
             }
-        
 
+            // перебор двумерного массива через foreach
+            foreach (int item in arr2d)
+            {
+                System.Console.WriteLine(item);
+            }
+                   
         }
     }    
 } 
