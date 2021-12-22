@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 // пространство имен - по имени проекта
 namespace C_Sharp_Basics {
@@ -8,29 +9,15 @@ namespace C_Sharp_Basics {
 
         // метод Main() - единственный на проект, точка входа в исполнение программы
         static void Main(string[] args) {
-            
+            Print();
+            Print("Hello everybody!");
+        }
 
-            int[,] arr2d = {
-                {11,21,31,41},
-                {52,62,72,82},
-                {93,10,11,12}
-            };
-
-            // перебор двумерного массива через for
-            for (int i = 0; i <= arr2d.GetUpperBound(0); i++)
-            {
-                for (int j = 0; j <= arr2d.GetUpperBound(1); j++)
-                {
-                    System.Console.WriteLine(arr2d[i,j]);
-                }
-            }
-
-            // перебор двумерного массива через foreach
-            foreach (int item in arr2d)
-            {
-                System.Console.WriteLine(item);
-            }
-                   
+        // public - метод доступен по всему проекту
+        // static - не требуется создавать экземпляр класса для вызова метода, метод принадлежит самому классу
+        // void - возвращаемое значение отсутствует
+        public static void Print(string msg = "Default"){
+            System.Console.WriteLine(msg);
         }
     }    
 } 

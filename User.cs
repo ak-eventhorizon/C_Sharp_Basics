@@ -2,6 +2,8 @@ using System;
 
 // пространство имен - по имени проекта
 namespace C_Sharp_Basics {
+
+
     interface IHuman {
         void Jump();
         void Speak(string message);
