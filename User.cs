@@ -9,7 +9,6 @@ namespace C_Sharp_Basics {
         void Speak(string message);
     }
 
-
     class User : IHuman {
 
         string Name;
