@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 // пространство имен - по имени проекта
 namespace C_Sharp_Basics {
@@ -12,8 +11,15 @@ namespace C_Sharp_Basics {
         static void Main(string[] args) {
             
             Robot bot = new Robot("Siri", 450, new int[] {1, 7, 4});
-            Console.WriteLine($"Name: {bot.Name}, Weight: {bot.Weight}, Coords: x{bot.Coords[0]} y{bot.Coords[1]} z{bot.Coords[2]}");
+            Console.WriteLine($"Name: {bot.Name}, Weight: {bot.Weight}, Coords: {bot.Coords[0]}x {bot.Coords[1]}y {bot.Coords[2]}z");
 
+            Robot bot2 = new Robot();
+            bot2.Name = "Manya";
+            bot2.Weight = 550;
+            bot2.Coords = new int[] {1, 2, 3};
+            Console.WriteLine($"Name: {bot2.Name}, Weight: {bot2.Weight}, Coords: {bot2.Coords[0]}x {bot2.Coords[1]}y {bot2.Coords[2]}z");
+
+            System.Console.WriteLine($"Was created {Robot.Counter} units");
         }
 
 

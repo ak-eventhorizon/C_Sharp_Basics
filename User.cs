@@ -1,5 +1,3 @@
-using System;
-
 // пространство имен - по имени проекта
 namespace C_Sharp_Basics {
 
@@ -12,15 +10,19 @@ namespace C_Sharp_Basics {
 
     class User : IHuman {
 
-        string Name;
+        private string name = "DefaultName";
+
+        // Аксессоры
+        public string Name { get => name; set => name = value; }
         
         // Конструктор
         public User(string name) {
             Name = name;
         }
 
+        
         public void Jump() {
-            Console.WriteLine(this.Name + " подпрыгнул!");
+            Console.WriteLine(Name + " подпрыгнул!");
         }
 
         public void Speak(string msg) {
