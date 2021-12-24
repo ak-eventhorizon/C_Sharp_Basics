@@ -33,7 +33,7 @@ namespace C_Sharp_Basics {
         }
 
         // метод
-        public void Report() {
+        public void StatusReport() {
                 Console.WriteLine($"Name: {this.Name}, Weight: {this.Weight}, Coords: {this.Coords[0]}x {this.Coords[1]}y {this.Coords[2]}z");
         }
     }
