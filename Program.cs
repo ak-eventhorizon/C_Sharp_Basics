@@ -10,8 +10,8 @@ namespace C_Sharp_Basics {
         // метод Main() - единственный на проект, точка входа в исполнение программы
         static void Main(string[] args) {
             
-            Robot bot = new Robot("Siri", 450, new int[] {1, 7, 4});
-            Console.WriteLine($"Name: {bot.Name}, Weight: {bot.Weight}, Coords: {bot.Coords[0]}x {bot.Coords[1]}y {bot.Coords[2]}z");
+            Robot bot1 = new Robot("Siri", 450, new int[] {1, 7, 4});
+            Console.WriteLine($"Name: {bot1.Name}, Weight: {bot1.Weight}, Coords: {bot1.Coords[0]}x {bot1.Coords[1]}y {bot1.Coords[2]}z");
 
             Robot bot2 = new Robot();
             bot2.Name = "Manya";

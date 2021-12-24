@@ -13,7 +13,14 @@ namespace C_Sharp_Basics {
         private string name = "DefaultName";
 
         // Аксессоры
-        public string Name { get => name; set => name = value; }
+        public string Name { 
+            get {
+                return name;
+            }
+            set {
+                name = value;
+            }
+        }
         
         // Конструктор
         public User(string name) {
