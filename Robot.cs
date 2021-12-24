@@ -5,6 +5,7 @@ namespace C_Sharp_Basics {
     class Robot {
 
         // поля класса - должны быть private или protected, доступ к полям через аксессоры или конструктор - это реализация инкапсуляции
+        // private - доступен только из самого класса, protected - доступен из класса и из его наследников
         private string name = "DefaultName";
         private int weight;
         private int[] coords = new int[] {0, 0, 0};
