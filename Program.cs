@@ -11,13 +11,13 @@ namespace C_Sharp_Basics {
         static void Main(string[] args) {
             
             Robot bot1 = new Robot("Siri", 450, new int[] {1, 7, 4});
-            Console.WriteLine($"Name: {bot1.Name}, Weight: {bot1.Weight}, Coords: {bot1.Coords[0]}x {bot1.Coords[1]}y {bot1.Coords[2]}z");
+            bot1.Report();
 
             Robot bot2 = new Robot();
             bot2.Name = "Manya";
             bot2.Weight = 550;
             bot2.Coords = new int[] {1, 2, 3};
-            Console.WriteLine($"Name: {bot2.Name}, Weight: {bot2.Weight}, Coords: {bot2.Coords[0]}x {bot2.Coords[1]}y {bot2.Coords[2]}z");
+            bot2.Report();
 
             System.Console.WriteLine($"Was created {Robot.Counter} units");
         }
