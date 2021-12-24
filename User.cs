@@ -12,7 +12,7 @@ namespace C_Sharp_Basics {
 
         private string name = "DefaultName";
 
-        // Аксессоры
+        // Аксессоры (Свойства)
         public string Name { 
             get {
                 return name;
