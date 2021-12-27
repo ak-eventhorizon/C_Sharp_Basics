@@ -24,6 +24,5 @@ namespace C_Sharp_Basics {
         {
             Console.WriteLine($"KILLER {Name} OPEN LASER FIRE!");
         }
-
     }
 }
