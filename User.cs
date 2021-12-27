@@ -2,12 +2,15 @@
 namespace C_Sharp_Basics {
 
 
+    // внутри интерфейса не описывается реализация, описывается только перечень необходимых к реализации
+    // полей, свойств и методов
     interface IHuman {
         void Jump();
         void Speak(string message);
     }
 
 
+    // в классе, наследуемом от интерфейса, необходимо реализовать все поля, свойства и методы интерфейса
     class User : IHuman {
 
         private string name = "DefaultName";
