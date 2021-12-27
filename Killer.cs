@@ -24,5 +24,10 @@ namespace C_Sharp_Basics {
         {
             Console.WriteLine($"KILLER {Name} OPEN LASER FIRE!");
         }
+
+        // реализация абстрактного метода из родительского класса
+        public override void Destroyed() {
+            Console.WriteLine($"{this.Name} WAS DESTROYED! BOOM!!");
+        }
     }
 }

@@ -42,5 +42,9 @@ namespace C_Sharp_Basics {
         public virtual void LaserFire() {
             Console.WriteLine($"{Name} has no lasers yet...");
         }
+
+        // абстрактный метод в абстрактном классе - не требует реализации, он просто указывается
+        // он должен быть реализован во всех классах-наследниках
+        public abstract void Destroyed();
     }
 }

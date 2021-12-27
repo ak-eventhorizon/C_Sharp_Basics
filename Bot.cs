@@ -11,5 +11,10 @@ namespace C_Sharp_Basics {
         public Bot(string name, int weight, int[] coords) : base(name, weight, coords) {
 
         }
+
+        // реализация абстрактного метода из родительского класса
+        public override void Destroyed() {
+            Console.WriteLine($"{this.Name} was destroyed... Beep!");
+        }
     }
 }
