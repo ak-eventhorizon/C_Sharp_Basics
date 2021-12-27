@@ -30,7 +30,7 @@ namespace C_Sharp_Basics {
         // переопределение виртуального метода родительского класса
         public override void LaserFire()
         {
-            Console.WriteLine($"KILLER {Name} OPEN LASER FIRE!");
+            Console.WriteLine($"KILLER {Name} OPEN FIRE WITH {LaserCol.ToString().ToUpper()} LASER!");
         }
 
         // реализация абстрактного метода из родительского класса
