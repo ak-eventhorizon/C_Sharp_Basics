@@ -14,8 +14,8 @@ namespace C_Sharp_Basics {
         }
 
         // конструктор с пробрасыванием трех параметров в свойства родительского класса
-        public Killer(string name, int weight, int[] coords, int health) : base(name, weight, coords)
-        {
+        public Killer(string name, int weight, int[] coords, int health) : base(name, weight, coords) {
+            
             this.Health = health;
         }
 
