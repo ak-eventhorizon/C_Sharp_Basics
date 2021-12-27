@@ -31,10 +31,13 @@ namespace C_Sharp_Basics {
         }
 
         
+        // реализация метода из интерфейса
         public void Jump() {
             Console.WriteLine(Name + " подпрыгнул!");
         }
 
+
+        // реализация метода из интерфейса
         public void Speak(string msg) {
             Console.WriteLine($"{this.Name} говорит: \"{msg}\"");
         }
