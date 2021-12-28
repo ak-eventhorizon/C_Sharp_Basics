@@ -30,7 +30,9 @@ namespace C_Sharp_Basics {
         // переопределение виртуального метода родительского класса
         public override void LaserFire()
         {
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine($"KILLER {Name} OPEN FIRE WITH {LaserCol.ToString().ToUpper()} LASER!");
+            Console.ResetColor();
         }
 
         // реализация абстрактного метода из родительского класса
