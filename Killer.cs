@@ -2,7 +2,7 @@ namespace C_Sharp_Basics {
 
 
     // перечисление - по сути это тип данных, содержащий список допустимых вариантов
-    enum LaserColor {Blue, Red, Green, Yellow, White}
+    enum LaserColor {Blue, Red, Green, Yellow}
 
 
     class Killer : Robot {
@@ -30,7 +30,27 @@ namespace C_Sharp_Basics {
         // переопределение виртуального метода родительского класса
         public override void LaserFire()
         {
-            Console.ForegroundColor = ConsoleColor.Red;
+
+            // установка цвета текста вывода в зависимости от параметра laserCol
+            switch (this.LaserCol)
+            {
+                case LaserColor.Blue:
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    break;
+                case LaserColor.Red:
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    break;
+                case LaserColor.Green:
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    break;
+                case LaserColor.Yellow:
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    break;
+                default:
+                    Console.ForegroundColor = ConsoleColor.White;
+                    break;
+            }
+
             Console.WriteLine($"KILLER {Name} OPEN FIRE WITH {LaserCol.ToString().ToUpper()} LASER!");
             Console.ResetColor();
         }
