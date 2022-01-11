@@ -38,7 +38,7 @@ namespace C_Sharp_Basics {
             System.Console.WriteLine($"Was created {Robot.Counter} units");
 
 
-            // создание экземпляра класса-наследника Killer от родительского Robot
+            // создание экземпляра класса Killer (наследника от родительского класса Robot)
             Killer demon = new Killer("DEMON", 45, new int[] {133, 45, 67}, 1000, LaserColor.Red);
             demon.LaserFire();  // переопределенный виртуальный метод из класса Killer
             bot1.LaserFire();  // исходный метод класса Robot
