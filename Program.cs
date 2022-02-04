@@ -11,20 +11,6 @@ namespace C_Sharp_Basics {
         // метод Main() - единственный на проект, точка входа в исполнение программы
         static void Main(string[] args) {
             
-            int num = 1;
-            switch (num)
-            {
-                case 1:
-                    System.Console.Write("1");
-                    goto case 5;
-                case 3:
-                    System.Console.Write("3");
-                    break;
-                case 5:
-                    System.Console.WriteLine("5");
-                    break;
-            }
-
             // использование конструктора с параметрами для создания объектов
             Bot bot1 = new Bot("Siri", 450, new int[] {1, 7, 4});
             bot1.StatusReport();
