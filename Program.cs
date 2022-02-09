@@ -10,7 +10,7 @@ namespace C_Sharp_Basics {
 
         // метод Main() - единственный на проект, точка входа в исполнение программы
         static void Main(string[] args) {
-            
+
             // использование конструктора с параметрами для создания объектов
             Bot bot1 = new Bot("Siri", 450, new int[] {1, 7, 4});
             bot1.StatusReport();
@@ -54,5 +54,5 @@ namespace C_Sharp_Basics {
         public static void Print(string msg = "") {
             System.Console.WriteLine(msg);
         }
-    }    
-} 
+    }
+}
