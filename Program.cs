@@ -11,6 +11,20 @@ namespace C_Sharp_Basics {
         // метод Main() - единственный на проект, точка входа в исполнение программы
         static void Main(string[] args) {
 
+            
+            // Test code samples here: =====================>
+            Stack<int> myArr = new Stack<int>();
+            myArr.Push(12);
+            myArr.Push(66);
+            myArr.Push(1678);
+
+            int max = myArr.Max();
+            System.Console.WriteLine(max);
+            
+            Console.ReadKey();
+            // End of code sample <==========================
+
+
             // использование конструктора с параметрами для создания объектов
             Bot bot1 = new Bot("Siri", 450, new int[] {1, 7, 4});
             bot1.StatusReport();
