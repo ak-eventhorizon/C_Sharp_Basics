@@ -13,13 +13,28 @@ namespace C_Sharp_Basics {
 
             
             // Test code samples here: =====================>
-            Stack<int> myArr = new Stack<int>();
-            myArr.Push(12);
-            myArr.Push(66);
-            myArr.Push(1678);
+            int[] numbers = new int[10];
+            Random rnd = new Random();
+            int min, max;
+ 
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                numbers[i] = rnd.Next(1, 100);
+            }
+            min = numbers[0];
+            max = numbers[0];
+            System.Console.WriteLine("[{0}]", string.Join(", ", numbers));
+            for (int i = 1; i < numbers.Length; i++)
+            {
+                if (min > numbers[i])
+                    min = numbers[i];
+                if (max < numbers[i])
+                    max = numbers[i];
+            }
+            Console.WriteLine("=====================================");
+            Console.WriteLine("The highest number in the array: > > > " + max);
+            Console.WriteLine("The lowest number in the array: > > > " + min);
 
-            int max = myArr.Max();
-            System.Console.WriteLine(max);
             
             Console.ReadKey();
             // End of code sample <==========================
