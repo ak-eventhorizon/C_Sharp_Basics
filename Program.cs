@@ -35,7 +35,7 @@ namespace C_Sharp_Basics {
             Console.WriteLine("The highest number in the array: > > > " + max);
             Console.WriteLine("The lowest number in the array: > > > " + min);
 
-            
+            Console.Write("PRESS ANY KEY");
             Console.ReadKey();
             // End of code sample <==========================
 
