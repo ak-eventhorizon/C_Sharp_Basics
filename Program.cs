@@ -12,7 +12,8 @@ namespace C_Sharp_Basics {
         static void Main(string[] args) {
 
             
-            // Test code samples here: =====================>
+            // Test code samples here: =============================================================>
+
             int[] numbers = new int[10];
             Random rnd = new Random();
             int min, max;
@@ -37,7 +38,8 @@ namespace C_Sharp_Basics {
 
             Console.Write("PRESS ANY KEY");
             Console.ReadKey();
-            // End of code sample <==========================
+
+            // End of code sample <=============================================================
 
 
             // использование конструктора с параметрами для создания объектов
