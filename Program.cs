@@ -32,13 +32,13 @@ namespace C_Sharp_Basics {
                 if (max < numbers[i])
                     max = numbers[i];
             }
-            Console.WriteLine(">>>>>=====================================<<<<<");
+            Console.WriteLine(">>>>>>>>=====================================<<<<<<<<");
             Console.WriteLine("The highest number in the array: > > > " + max);
             Console.WriteLine("The lowest number in the array: > > > " + min);
 
             Console.WriteLine("PRESS ANY KEY");
             Console.ReadKey();
-            Console.WriteLine(">>>>>=====================================<<<<<");
+            Console.WriteLine(">>>>>>>>=====================================<<<<<<<<");
 
             // End of code sample <=============================================================
 
