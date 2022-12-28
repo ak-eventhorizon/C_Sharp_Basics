@@ -12,25 +12,21 @@ namespace C_Sharp_Basics {
         static void Main(string[] args) {
 
             
-            // Test code samples here: =============================================================>
+            // Test code examples here: =============================================================>
 
             Example.Print("Hello!!!");
-            Console.WriteLine("PRESS ANY KEY TO CONTINUE");
-            Console.ReadKey();
+
 
             Example.GetMinMaxFromRandomArray();
-            Console.WriteLine("PRESS ANY KEY TO CONTINUE");
-            Console.ReadKey();
+            
 
             DateTime start1 = new DateTime(2022,12,28,9,30,0); // 28.12.2022 9:30
             DateTime end1 = new DateTime(2022,12,28,13,30,0); // 28.12.2022 13:30
-            DateTime start2 = new DateTime(2022,12,28,13,0,0); // 28.12.2022 13:00
+            DateTime start2 = new DateTime(2022,12,28,13,30,0); // 28.12.2022 13:00
             DateTime end2 = new DateTime(2022,12,28,15,0,0); // 28.12.2022 15:00
             Example.GetTimeIntersection(start1, end1, start2, end2);
-            Console.WriteLine("PRESS ANY KEY TO CONTINUE");
-            Console.ReadKey();
 
-            // End of code sample <=============================================================
+            // End of code examples <=============================================================
 
 
             // использование конструктора с параметрами для создания объектов
