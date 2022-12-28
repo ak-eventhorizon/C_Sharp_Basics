@@ -14,31 +14,21 @@ namespace C_Sharp_Basics {
             
             // Test code samples here: =============================================================>
 
-            int[] numbers = new int[10];
-            Random rnd = new Random();
-            int min, max;
- 
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                numbers[i] = rnd.Next(1, 100);
-            }
-            min = numbers[0];
-            max = numbers[0];
-            System.Console.WriteLine("[{0}]", string.Join(", ", numbers));
-            for (int i = 1; i < numbers.Length; i++)
-            {
-                if (min > numbers[i])
-                    min = numbers[i];
-                if (max < numbers[i])
-                    max = numbers[i];
-            }
-            Console.WriteLine(">>>>>>>>>>=================================<<<<<<<<<<");
-            Console.WriteLine("The highest number in the array: > > > " + max);
-            Console.WriteLine("The lowest number in the array: > > > " + min);
-
-            Console.WriteLine("PRESS ANY KEY");
+            Example.Print("Hello!!!");
+            Console.WriteLine("PRESS ANY KEY TO CONTINUE");
             Console.ReadKey();
-            Console.WriteLine(">>>>>>>>>>=================================<<<<<<<<<<");
+
+            Example.GetMinMaxFromRandomArray();
+            Console.WriteLine("PRESS ANY KEY TO CONTINUE");
+            Console.ReadKey();
+
+            DateTime start1 = new DateTime(2022,12,28,9,30,0); // 28.12.2022 9:30
+            DateTime end1 = new DateTime(2022,12,28,13,30,0); // 28.12.2022 13:30
+            DateTime start2 = new DateTime(2022,12,28,13,0,0); // 28.12.2022 13:00
+            DateTime end2 = new DateTime(2022,12,28,15,0,0); // 28.12.2022 15:00
+            Example.GetTimeIntersection(start1, end1, start2, end2);
+            Console.WriteLine("PRESS ANY KEY TO CONTINUE");
+            Console.ReadKey();
 
             // End of code sample <=============================================================
 
@@ -76,15 +66,6 @@ namespace C_Sharp_Basics {
             bot1.LaserFire();  // исходный метод класса Robot
 
             System.Console.WriteLine($"Was created {Robot.Counter} units"); // создание класса-наследника так-же увеличивает counter родительского класса Robot
-        }
-
-
-        // public - метод доступен по всему проекту
-        // static - не требуется создавать экземпляр класса для вызова метода, метод принадлежит самому классу
-        // статические методы не могут обращаться к своему окружению (только к статическим членам своего класса), все данные должны быть переданы им в параметрах
-        // void - возвращаемое значение отсутствует
-        public static void Print(string msg = "") {
-            System.Console.WriteLine(msg);
         }
     }
 }
