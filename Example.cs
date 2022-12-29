@@ -1,6 +1,8 @@
-// Данный файл содержит различные тестовые примеры (реализованы в виде статических методов класса Example)
 namespace C_Sharp_Basics
 {
+    /// <summary>
+    /// Данный класс содержит различные тестовые примеры (реализованы в виде статических методов класса Example)
+    /// </summary>
     class Example {
 
 
@@ -85,6 +87,47 @@ namespace C_Sharp_Basics
 
             Console.WriteLine("PRESS ANY KEY TO CONTINUE");
             Console.ReadKey();
+        }
+
+
+        /// <summary>
+        /// Демонстрирует различные кейсы использования ООП концепций проекта.
+        /// </summary>
+        public static void OOP() {
+
+            // использование конструктора с параметрами для создания объектов
+            Bot bot1 = new Bot("Siri", 450, new int[] {1, 7, 4});
+            bot1.StatusReport();
+
+            // использование конструктора без параметров, с последующей установкой свойств объекта
+            Bot bot2 = new Bot();
+            bot2.Name = "Manya";
+            bot2.Weight = 550;
+            bot2.Coords = new int[] {1, 2, 3};
+            bot2.StatusReport();
+
+            // создание списка объектов
+            List<Bot> robots = new List<Bot>();
+            robots.Add(new Bot("2B", 75, new int[] {10, 5, 3}));
+            robots.Add(new Bot("R2D2", 77, new int[] {11, 11, 5}));
+            robots.Add(new Bot("C3PO", 129, new int[] {10, 10, 6}));
+            robots.Add(new Bot("T-1000", 400, new int[] {7, 15, 0}));
+
+            foreach (Bot item in robots)
+            {
+                item.StatusReport();
+            }
+
+            // вывод статического свойства самого класса Robot
+            System.Console.WriteLine($"Was created {Robot.Counter} units");
+
+
+            // создание экземпляра класса Killer (наследника от родительского класса Robot)
+            Killer demon = new Killer("DEMON", 45, new int[] {133, 45, 67}, 1000, LaserColor.Red);
+            demon.LaserFire();  // переопределенный виртуальный метод из класса Killer
+            bot1.LaserFire();  // исходный метод из класса Robot
+
+            System.Console.WriteLine($"Was created {Robot.Counter} units"); // создание класса-наследника так-же увеличивает counter родительского класса Robot
         }
     }
 }
