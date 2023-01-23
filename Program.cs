@@ -14,6 +14,8 @@ namespace C_Sharp_Basics {
             // Example.Print("Hello!!!");
             // Example.GetMinMaxFromRandomArray();
             // Example.OOP();
+            // Example.LotteryStat(1000);
+
 
             DateTime start1 = new DateTime(2022,12,28,9,30,0); // 28.12.2022 9:30
             DateTime end1 = new DateTime(2022,12,28,12,30,0); // 28.12.2022 12:30

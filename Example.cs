@@ -129,5 +129,39 @@ namespace C_Sharp_Basics
 
             System.Console.WriteLine($"Was created {Robot.Counter} units"); // создание класса-наследника так-же увеличивает counter родительского класса Robot
         }
+
+
+        /// <summary>
+        /// Проверка гипотезы, что лучше при игре в лоттерею? Каждый тираж угадывать заново или придерживаться одного мнения на все тиражи до выигрыша.
+        /// </summary>
+        public static void LotteryStat(int rounds) {
+            int permanent_desicion = 8;
+            int changeable_desicion;
+
+            int perm_wins = 0;
+            int chng_wins = 0;
+
+            Random rnd = new Random();
+
+            for (int i = 0; i < rounds; i++)
+            {
+                int current_win_combination = rnd.Next(1, 21);
+                changeable_desicion = rnd.Next(1, 21);
+
+                if (current_win_combination == permanent_desicion)
+                {
+                    perm_wins++;
+                } 
+                
+                if (current_win_combination == changeable_desicion)
+                {
+                    chng_wins++;
+                }
+            }
+
+            System.Console.WriteLine("Раундов лотереи:" + rounds);
+            System.Console.WriteLine("Постоянное мнение выиграло " + perm_wins + "раз.");
+            System.Console.WriteLine("Изменчивое мнение выиграло " + chng_wins + "раз.");
+        }
     }
 }
