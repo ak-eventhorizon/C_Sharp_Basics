@@ -25,7 +25,6 @@ namespace C_Sharp_Basics {
 
             Example.GetTimeIntersection(start1, end1, start2, end2);
 
-
         }
     }
 }
