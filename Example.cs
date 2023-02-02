@@ -137,6 +137,7 @@ namespace C_Sharp_Basics
         public static void LotteryStat(int rounds) {
             int permanent_desicion = 8;
             int changeable_desicion;
+            int current_win_combination;
 
             int perm_wins = 0;
             int chng_wins = 0;
@@ -144,8 +145,8 @@ namespace C_Sharp_Basics
             Random rnd = new Random();
 
             for (int i = 0; i < rounds; i++)
-            {
-                int current_win_combination = rnd.Next(1, 21);
+            {    
+                current_win_combination = rnd.Next(1, 21);
                 changeable_desicion = rnd.Next(1, 21);
 
                 if (current_win_combination == permanent_desicion)
